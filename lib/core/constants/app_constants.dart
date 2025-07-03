@@ -6,11 +6,12 @@ class AppConstants {
   static const Duration networkTimeout = Duration(seconds: 10);
   static const int maxFlightsToShow = 100;
 
-  // Popular countries for search suggestions
+
   static const List<String> popularCountries = [
     'United States',
     'Germany',
     'United Kingdom',
+    'Bangladesh',
     'France',
     'Japan',
     'Canada',

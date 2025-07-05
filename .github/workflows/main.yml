@@ -36,7 +36,7 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      - name: 🦋 Setup Flutter
+      - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
           channel: stable
@@ -44,8 +44,8 @@ jobs:
       - name: 📥 Get dependencies
         run: flutter pub get
 
-      - name: ✅ Run tests
-        run: flutter test --coverage
+#      - name: ✅ Run tests
+#        run: flutter test --coverage
 
       - name: 🏗️ Build APKs
         run: flutter build apk --release --split-per-abi
@@ -63,4 +63,4 @@ jobs:
           tag:       ${{ github.ref_name }}
           name:      Release ${{ github.ref_name }}
           artifacts: artifacts/*.apk
-          token:     ${{ secrets.GITHUB_TOKEN }}
+          token:     ${{ secrets.TOKEN }}

@@ -29,19 +29,19 @@
 
 ### 🛫 Live Flights
 
-<img src="./live-flights.png" alt="Live Flights" width="900"/>
+<img src="./live-flights.png" alt="Live Flights" width="450"/>
 
 ---
 
 ### 🔍 Search Flights
 
-<img src="./search-flights.png" alt="Search Flights" width="900"/>
+<img src="./search-flights.png" alt="Search Flights" width="450"/>
 
 ---
 
 ### 📋 Flight Details
 
-<img src="./flight-details.png" alt="Flight Details" width="900"/>
+<img src="./flight-details.png" alt="Flight Details" width="450"/>
 
 </div>
 

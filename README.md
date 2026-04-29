@@ -1,4 +1,3 @@
-````md
 <div align="center">
 
 # ✈️ TrackSky
@@ -71,7 +70,7 @@ TrackSky follows **Clean Architecture** with three distinct layers:
 Presentation Layer   →  Screens, Widgets, Providers (Riverpod)
 Domain Layer         →  Entities, Repository Interface, Use Cases
 Data Layer           →  Models (Freezed), Repository Implementation, Dio HTTP
-````
+```
 
 ### Layer Breakdown
 
@@ -118,9 +117,9 @@ lib/
 
 TrackSky uses the **OpenSky Network REST API** — free, no authentication required for anonymous access.
 
-| Endpoint                      | Used For                                           |
+| Endpoint | Used For |
 | ----------------------------- | -------------------------------------------------- |
-| `GET /states/all`             | Fetch all active flights worldwide                 |
+| `GET /states/all` | Fetch all active flights worldwide |
 | `GET /states/all?icao24=<id>` | Fetch a specific flight by ICAO24 transponder code |
 
 OpenSky returns flight state vectors as raw arrays. `FlightModel.fromList()` maps each positional index to a typed field:
@@ -176,19 +175,19 @@ flutter build web --release
 
 ## 🛠️ Tech Stack
 
-| Category         | Technology                      | Version           |
+| Category | Technology | Version |
 | ---------------- | ------------------------------- | ----------------- |
-| Framework        | Flutter                         | 3.x               |
-| Language         | Dart                            | ^3.7.0            |
-| State Management | Riverpod (`flutter_riverpod`)   | ^2.4.9            |
-| Navigation       | GoRouter                        | ^12.1.3           |
-| HTTP Client      | Dio                             | ^5.4.0            |
-| Map              | flutter_map + latlong2          | latest            |
-| Code Generation  | Freezed + json_serializable     | ^2.4.6 / ^6.7.1   |
-| Animations       | flutter_animate                 | ^4.5.0            |
-| Location         | geolocator + permission_handler | ^10.1.0 / ^11.1.0 |
-| Fonts            | google_fonts                    | ^6.1.0            |
-| Image Caching    | cached_network_image            | ^3.3.0            |
+| Framework | Flutter | 3.x |
+| Language | Dart | ^3.7.0 |
+| State Management | Riverpod (`flutter_riverpod`) | ^2.4.9 |
+| Navigation | GoRouter | ^12.1.3 |
+| HTTP Client | Dio | ^5.4.0 |
+| Map | flutter_map + latlong2 | latest |
+| Code Generation | Freezed + json_serializable | ^2.4.6 / ^6.7.1 |
+| Animations | flutter_animate | ^4.5.0 |
+| Location | geolocator + permission_handler | ^10.1.0 / ^11.1.0 |
+| Fonts | google_fonts | ^6.1.0 |
+| Image Caching | cached_network_image | ^3.3.0 |
 
 ---
 
@@ -196,19 +195,19 @@ flutter build web --release
 
 Each tracked flight exposes:
 
-| Field                    | Description                                  |
+| Field | Description |
 | ------------------------ | -------------------------------------------- |
-| `icao24`                 | Unique ICAO 24-bit transponder address       |
-| `callsign`               | Flight callsign (e.g. `BAW123`)              |
-| `originCountry`          | Country of registration                      |
-| `latitude` / `longitude` | Current GPS position                         |
-| `baroAltitude`           | Barometric altitude (metres)                 |
-| `geoAltitude`            | Geometric altitude (metres)                  |
-| `velocity`               | Ground speed (m/s → converted to km/h)       |
-| `trueTrack`              | Heading in degrees (converted to N/NE/E/SE…) |
-| `verticalRate`           | Climb/descent rate (m/s)                     |
-| `onGround`               | Whether the aircraft is on the ground        |
-| `squawk`                 | Transponder squawk code                      |
+| `icao24` | Unique ICAO 24-bit transponder address |
+| `callsign` | Flight callsign (e.g. `BAW123`) |
+| `originCountry` | Country of registration |
+| `latitude` / `longitude` | Current GPS position |
+| `baroAltitude` | Barometric altitude (metres) |
+| `geoAltitude` | Geometric altitude (metres) |
+| `velocity` | Ground speed (m/s → converted to km/h) |
+| `trueTrack` | Heading in degrees (converted to N/NE/E/SE…) |
+| `verticalRate` | Climb/descent rate (m/s) |
+| `onGround` | Whether the aircraft is on the ground |
+| `squawk` | Transponder squawk code |
 
 ---
 
@@ -219,4 +218,3 @@ Built with ❤️ using Flutter & OpenSky Network
 ⭐ Star this repo if you found it useful!
 
 </div>
-```
